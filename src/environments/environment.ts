@@ -1,17 +1,17 @@
-export const environment = {
-  production: false,
-  auth_apiBaseUrl: 'https://taskappapi.runasp.net/api/Auth',
-  password_apiBaseUrl: 'https://taskappapi.runasp.net/api/password',
-  project_apiBaseUrl: 'https://taskappapi.runasp.net/api/Project',
-  task_apiBaseUrl: 'https://taskappapi.runasp.net/api/Task'
-};
 // export const environment = {
 //   production: false,
-//   auth_apiBaseUrl: 'https://localhost:7093/api/Auth',
-//   password_apiBaseUrl: 'https://localhost:7093/api/password',
-//   project_apiBaseUrl: 'https://localhost:7093/api/Project',
-//   task_apiBaseUrl: 'https://localhost:7093/api/Task'
+//   auth_apiBaseUrl: 'https://taskappapi.runasp.net/api/Auth',
+//   password_apiBaseUrl: 'https://taskappapi.runasp.net/api/password',
+//   project_apiBaseUrl: 'https://taskappapi.runasp.net/api/Project',
+//   task_apiBaseUrl: 'https://taskappapi.runasp.net/api/Task'
 // };
+export const environment = {
+  production: false,
+  auth_apiBaseUrl: 'https://localhost:7093/api/Auth',
+  password_apiBaseUrl: 'https://localhost:7093/api/password',
+  project_apiBaseUrl: 'https://localhost:7093/api/Project',
+  task_apiBaseUrl: 'https://localhost:7093/api/Task'
+};
 
 // export const environment = {
 //   production: false,

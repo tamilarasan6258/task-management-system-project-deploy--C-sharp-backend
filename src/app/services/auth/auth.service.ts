@@ -53,25 +53,6 @@
   }
 
 
-    // public tryRestoreSession(): void {
-
-    //   if (!this.memorytoken) {
-    //     this.refreshAccessToken().subscribe({
-    //       next: (res) => {
-    //         this.setMemoryToken(res.accessToken);
-    //         this.initTokenWatcher();
-    //         console.log('Session restored via refresh token');
-    //       },
-    //       error: (err) => {
-    //         console.log('No valid refresh token in cookie');
-    //         // this.logout();
-    //       }
-    //     });
-    //   } else {
-    //     this.initTokenWatcher();
-    //   }
-    // }
-
     setMemoryToken(token: string | null): void {
       this.memorytoken = token;
     }
@@ -116,18 +97,6 @@
         return null;
       }
     }
-
-    // private startTokenWatcher() {
-    //   const exp = this.getTokenExpiration();
-    //   if (!exp) return;
-
-    //   const expiresIn = exp * 1000 - Date.now();
-    //   if (expiresIn > 0) {
-    //     this.tokenTimer = timer(expiresIn).subscribe(() => this.logout());
-    //   } else {
-    //     this.logout();
-    //   }
-    // }
 
     private startTokenWatcher() {
       const exp = this.getTokenExpiration();
@@ -292,57 +261,7 @@
     }
 
 
-    // logout(): void {
-    //   // sessionStorage.setItem('sessionExpired', 'true');   //marks session as expired
-    //   // sessionStorage.clear();                             //clears session storage
-    //   // Clear access token from memory
-    //   this.memorytoken = null;
-
-    //   // Optionally also clear username or other info
-    //   this.username = null;
-
-    //   this.stopTokenWatcher();                            //stops token watcher
-    //   this.router.navigate(['/login'], {                  //navigate to login
-    //     queryParams: { message: 'Your session has expired. Please login again.' }
-    //   });
-    // }
-
-    //   logout(): void {
-    //   // Clear token in memory
-    //   this.memorytoken = null;
-    //   this.username = null;
-
-    //   console.log('front end memory token cleared',this.memorytoken);
-    //   console.log('front end username cleared',this.username);
-
-    //   // Stop token watcher
-    //   this.stopTokenWatcher();
-
-    //   // Call backend to clear refresh token cookie
-    //   this.http.post(`${this.apiUrl}/logout`, {}, { withCredentials: true }).subscribe({
-    //     next: () => {
-    //       console.log('Refresh token cookie cleared');
-    //       // Navigate to login
-    //   this.router.navigate(['/login'], {
-    //     queryParams: { message: 'You have been logged out.' }
-    //   });
-    //     },
-    //     error: err => {
-    //       console.error('Error clearing refresh token:', err);
-    //       // Navigate to login
-    //   this.router.navigate(['/login'], {
-    //     queryParams: { message: 'You have been logged out.' }
-    //   });
-    //     }
-    //   });
-
-    //   console.log('api finished');
-    //   // Navigate to login
-    //   this.router.navigate(['/login'], {
-    //     queryParams: { message: 'You have been logged out.' }
-    //   });
-    // }
-
+    
     logout(): void {
       this.memorytoken = null;
       this.username = null;
