@@ -35,9 +35,7 @@
             <mat-error *ngIf="taskForm.get('taskName')?.touched && taskForm.get('taskName')?.hasError('invalidPattern')">
               Invalid pattern: include letters and optionally numbers/symbols.
             </mat-error>
-            <!-- <mat-error *ngIf="duplicateNameError">
-              Task name already exists.
-            </mat-error> -->
+    
             <mat-error *ngIf="taskForm.get('taskName')?.hasError('duplicateName')">
   Task name already exists.
 </mat-error>
